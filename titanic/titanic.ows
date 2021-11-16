@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Train" position="(104.0, -121.0)" />
+		<node id="1" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table" position="(244.0, -197.0)" />
+		<node id="2" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns" position="(316.0, -68.0)" />
+		<node id="3" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score" position="(575.0, -64.0)" />
+		<node id="4" name="Random Forest" qualified_name="Orange.widgets.model.owrandomforest.OWRandomForest" project_name="Orange3" version="" title="Random Forest" position="(427.0, -160.0)" />
+		<node id="5" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Test" position="(96.0, 91.0)" />
+		<node id="6" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns (1)" position="(396.0, 112.0)" />
+		<node id="7" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Gender_submission" position="(96.0, 294.0)" />
+		<node id="8" name="Merge Data" qualified_name="Orange.widgets.data.owmergedata.OWMergeData" project_name="Orange3" version="" title="Merge Data" position="(238.0, 206.0)" />
+		<node id="9" name="Logistic Regression" qualified_name="Orange.widgets.model.owlogisticregression.OWLogisticRegression" project_name="Orange3" version="" title="Logistic Regression" position="(424.0, -267.0)" />
+		<node id="10" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table (1)" position="(399.0, 291.0)" />
+		<node id="11" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Scatter Plot" position="(320.0, -272.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="1" source_node_id="0" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="2" source_node_id="2" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="3" source_node_id="4" sink_node_id="3" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="4" source_node_id="6" sink_node_id="3" source_channel="Data" sink_channel="Test Data" enabled="true" />
+		<link id="5" source_node_id="5" sink_node_id="8" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="6" source_node_id="7" sink_node_id="8" source_channel="Data" sink_channel="Extra Data" enabled="true" />
+		<link id="7" source_node_id="8" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="8" source_node_id="9" sink_node_id="3" source_channel="Learner" sink_channel="Learner" enabled="true" />
+		<link id="9" source_node_id="8" sink_node_id="10" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="10" source_node_id="1" sink_node_id="11" source_channel="Selected Data" sink_channel="Data" enabled="true" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': 'C:/Users/a362014/OneDrive/Estudos/IBM/Maratona Behind the Code 2021/Igor/desafio-1-2021/titanic/train.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 12, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'C:/Users/a362014/OneDrive/Estudos/IBM/Maratona Behind the Code 2021/Igor/desafio-1-2021/titanic', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04u\x00\x00\x02"\x00\x00\x05\x8a\x00\x00\x03V\x00\x00\x04u\x00\x00\x02"\x00\x00\x05\x8a\x00\x00\x03V\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04u\x00\x00\x02"\x00\x00\x05\x8a\x00\x00\x03V', '__version__': 3}</properties>
+		<properties node_id="1" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x05\x0b\x00\x00\x01\x19\x00\x00\t\xcc\x00\x00\x03\xd6\x00\x00\x05\x0c\x00\x00\x018\x00\x00\t\xcb\x00\x00\x03\xd5\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x05\x0c\x00\x00\x018\x00\x00\t\xcb\x00\x00\x03\xd5', 'select_rows': True, 'selected_cols': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 'selected_rows': [0], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="2" format="pickle">gASVgAIAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAA9QAAAGQ
+AAAGKwAAA+cAAAPUAAABkAAABisAAAPnAAAAAAAAAAAKAAAAA9QAAAGQAAAGKwAAA+eUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9y
+YW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMEWRvbWFp
+bl9yb2xlX2hpbnRzlH2UKIwLUGFzc2VuZ2VySWSUSwKGlIwJYXZhaWxhYmxllEsAhpSMCEVtYmFy
+a2VklEsBhpRoFUsBhpSMBlBjbGFzc5RLAoaUjAlhdHRyaWJ1dGWUSwCGlIwDU2V4lEsBhpRoHEsB
+hpSMA0FnZZRLAoaUaBxLAoaUjAVTaWJTcJRLAoaUaBxLA4aUjAVQYXJjaJRLAoaUaBxLBIaUjARG
+YXJllEsChpRoHEsFhpSMCFN1cnZpdmVklEsBhpSMBWNsYXNzlEsAhpSMBE5hbWWUSwOGlIwEbWV0
+YZRLAIaUjAZUaWNrZXSUSwOGlGgzSwGGlIwFQ2FiaW6USwOGlGgzSwKGlHVK/v///4aUaAdLAXWM
+CmF0dHJpYnV0ZXOUfZQoaBNLAmgtSwFoGksCaB5LAWghSwJoJEsCaCdLAmgqSwJoF0sBdYwFbWV0
+YXOUfZQoaDFLA2g1SwNoOEsDdXViYXUu
+</properties>
+		<properties node_id="3" format="pickle">gASV3AIAAAAAAAB9lCiMFGNvbXBhcmlzb25fY3JpdGVyaW9ulEsAjBJjb250cm9sQXJlYVZpc2li
+bGWUiIwNY3Zfc3RyYXRpZmllZJSIjAduX2ZvbGRzlEsDjAluX3JlcGVhdHOUSwOMCnJlc2FtcGxp
+bmeUSwWMBHJvcGWURz+5mZmZmZmajAtzYW1wbGVfc2l6ZZRLCYwTc2F2ZWRXaWRnZXRHZW9tZXRy
+eZRDQgHZ0MsAAwAAAAAA3QAAAKIAAAPqAAACtQAAAN4AAADBAAAD6QAAArQAAAAAAAAAAAoAAAAA
+3gAAAMEAAAPpAAACtJSMEnNodWZmbGVfc3RyYXRpZmllZJSJjAh1c2Vfcm9wZZSJjAtzY29yZV90
+YWJsZZR9lIwMc2hvd25fc2NvcmVzlI+UKIwDQVVDlIwCQ0GUjARSTVNFlIwJUHJlY2lzaW9ulIwG
+UmVjYWxslIwCRjGUjANNQUWUjAJSMpSMA01TRZSQc4wLX192ZXJzaW9uX1+USwOMEGNvbnRleHRf
+c2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZh
+bHVlc5R9lCiMD2NsYXNzX3NlbGVjdGlvbpSMFihBdmVyYWdlIG92ZXIgY2xhc3NlcymUSv////+G
+lIwMZm9sZF9mZWF0dXJllE5K/v///4aUjBVmb2xkX2ZlYXR1cmVfc2VsZWN0ZWSUiUr+////hpRo
+DX2UaBpLA3WMCmF0dHJpYnV0ZXOUKIwGUGNsYXNzlEsChpSMA1NleJRLAYaUjANBZ2WUSwKGlIwF
+U2liU3CUSwKGlIwFUGFyY2iUSwKGlIwERmFyZZRLAoaUdJSMBW1ldGFzlIwETmFtZZRLA4aUjAZU
+aWNrZXSUSwOGlIwFQ2FiaW6USwOGlIeUjApjbGFzc192YXJzlIwIU3Vydml2ZWSUSwGGlIWUdWJh
+dS4=
+</properties>
+		<properties node_id="4" format="literal">{'auto_apply': True, 'class_weight': False, 'controlAreaVisible': True, 'index_output': 0, 'learner_name': '', 'max_depth': 3, 'max_features': 5, 'min_samples_split': 5, 'n_estimators': 100, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04N\x00\x00\x02\x03\x00\x00\x05\xb1\x00\x00\x03V\x00\x00\x04O\x00\x00\x02"\x00\x00\x05\xb0\x00\x00\x03U\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04O\x00\x00\x02"\x00\x00\x05\xb0\x00\x00\x03U', 'use_max_depth': False, 'use_max_features': True, 'use_min_samples_split': True, 'use_random_state': True, '__version__': 1}</properties>
+		<properties node_id="5" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': 'C:/Users/a362014/OneDrive/Estudos/IBM/Maratona Behind the Code 2021/Igor/desafio-1-2021/titanic/test.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 11, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': 'C:/Users/a362014/OneDrive/Estudos/IBM/Maratona Behind the Code 2021/Igor/desafio-1-2021/titanic/train.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 12, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'C:/Users/a362014/OneDrive/Estudos/IBM/Maratona Behind the Code 2021/Igor/desafio-1-2021/titanic', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04t\x00\x00\x02\x03\x00\x00\x05\x8b\x00\x00\x03W\x00\x00\x04u\x00\x00\x02"\x00\x00\x05\x8a\x00\x00\x03V\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04u\x00\x00\x02"\x00\x00\x05\x8a\x00\x00\x03V', '__version__': 3}</properties>
+		<properties node_id="6" format="pickle">gASVXgMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNpZ25v
+cmVfbmV3X2ZlYXR1cmVzlImME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAa0AAAGL
+AAAEBAAAA+IAAAGtAAABiwAABAQAAAPiAAAAAAAAAAAKAAAAAa0AAAGLAAAEBAAAA+KUjBJ1c2Vf
+aW5wdXRfZmVhdHVyZXOUiYwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVv
+cmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBFkb21h
+aW5fcm9sZV9oaW50c5R9lCiMC1Bhc3NlbmdlcklklEsChpSMCWF2YWlsYWJsZZRLAIaUjAhFbWJh
+cmtlZJRLAYaUaBVLAYaUjAZQY2xhc3OUSwKGlIwJYXR0cmlidXRllEsAhpSMA1NleJRLAYaUaBxL
+AYaUjANBZ2WUSwKGlGgcSwKGlIwFU2liU3CUSwKGlGgcSwOGlIwFUGFyY2iUSwKGlGgcSwSGlIwE
+RmFyZZRLAoaUaBxLBYaUjAhTdXJ2aXZlZJRLAYaUjAVjbGFzc5RLAIaUjAROYW1llEsDhpSMBG1l
+dGGUSwCGlIwGVGlja2V0lEsDhpRoM0sBhpSMBUNhYmlulEsDhpRoM0sChpR1Sv7///+GlGgHSwF1
+jAphdHRyaWJ1dGVzlH2UKGgTSwJoGksCaB5LAWghSwJoJEsCaCdLAmgqSwJoF0sBaC1LAXWMBW1l
+dGFzlH2UKGgxSwNoNUsDaDhLA3V1YmgMKYGUfZQoaA99lChoEX2UKGgTSwKGlGgVSwCGlGgXSwGG
+lGgVSwGGlGgaSwKGlGgcSwCGlGgeSwGGlGgcSwGGlGghSwKGlGgcSwKGlGgkSwKGlGgcSwOGlGgn
+SwKGlGgcSwSGlGgqSwKGlGgcSwWGlGgxSwOGlGgzSwCGlGg1SwOGlGgzSwGGlGg4SwOGlGgzSwKG
+lHVK/v///4aUaAdLAXVoPH2UKGgTSwJoGksCaB5LAWghSwJoJEsCaCdLAmgqSwJoF0sBdWg+fZQo
+aDFLA2g1SwNoOEsDdXViZXUu
+</properties>
+		<properties node_id="7" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': 'C:/Users/a362014/OneDrive/Estudos/IBM/Maratona Behind the Code 2021/Igor/desafio-1-2021/titanic/gender_submission.csv'}, {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 2, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': 'C:/Users/a362014/OneDrive/Estudos/IBM/Maratona Behind the Code 2021/Igor/desafio-1-2021/titanic', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04t\x00\x00\x02\x03\x00\x00\x05\x8b\x00\x00\x03W\x00\x00\x04u\x00\x00\x02"\x00\x00\x05\x8a\x00\x00\x03V\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04u\x00\x00\x02"\x00\x00\x05\x8a\x00\x00\x03V', '__version__': 3}</properties>
+		<properties node_id="8" format="pickle">gASVxQEAAAAAAAB9lCiMCmF1dG9fYXBwbHmUiIwSY29udHJvbEFyZWFWaXNpYmxllIiMB21lcmdp
+bmeUSwCME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAABBIAAAIqAAAFdAAAAy8AAAQT
+AAACSQAABXMAAAMuAAAAAAAAAAAKAAAABBMAAAJJAAAFcwAAAy6UjAtfX3ZlcnNpb25fX5RLAowQ
+Y29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmB
+lH2UKIwGdmFsdWVzlH2UKIwKYXR0cl9wYWlyc5RdlF2UKIwLUGFzc2VuZ2VySWSUS2aGlIwLUGFz
+c2VuZ2VySWSUS2aGlGVhaAZLAnWMCnZhcmlhYmxlczGUfZQoaBNLZowGUGNsYXNzlEtmjANTZXiU
+S2WMA0FnZZRLZowFU2liU3CUS2aMBVBhcmNolEtmjARGYXJllEtmjAhFbWJhcmtlZJRLZYwETmFt
+ZZRLZ4wGVGlja2V0lEtnjAVDYWJpbpRLZ3WMCnZhcmlhYmxlczKUfZQoaBVLZowIU3Vydml2ZWSU
+S2V1dWJhdS4=
+</properties>
+		<properties node_id="9" format="literal">{'C_index': 60, 'auto_apply': True, 'class_weight': False, 'controlAreaVisible': True, 'learner_name': '', 'penalty_type': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x04\x97\x00\x00\x02"\x00\x00\x05i\x00\x00\x038\x00\x00\x04\x98\x00\x00\x02A\x00\x00\x05h\x00\x00\x037\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x04\x98\x00\x00\x02A\x00\x00\x05h\x00\x00\x037', '__version__': 1}</properties>
+		<properties node_id="10" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xab\x00\x00\x01\xd4\x00\x00\x06T\x00\x00\x04e\x00\x00\x00\xac\x00\x00\x01\xf3\x00\x00\x06S\x00\x00\x04d\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x00\xac\x00\x00\x01\xf3\x00\x00\x06S\x00\x00\x04d', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="11" format="pickle">gASV/wIAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAEVAAAA8gAABYIAAAPV
+AAABFgAAAREAAAWBAAAD1AAAAAAAAAAACgAAAAEWAAABEQAABYEAAAPUlIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSJjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSJjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsKjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5z
+ZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfY29sb3KUTkr+////
+hpSMCmF0dHJfbGFiZWyUTkr+////hpSMCmF0dHJfc2hhcGWUTkr+////hpSMCWF0dHJfc2l6ZZRO
+Sv7///+GlIwGYXR0cl94lIwLUGFzc2VuZ2VySWSUS2aGlIwGYXR0cl95lIwIU3Vydml2ZWSUS2WG
+lGgKfZRoFksFdYwKYXR0cmlidXRlc5R9lChoKUsCaCxLAYwGUGNsYXNzlEsCjANTZXiUSwGMA0Fn
+ZZRLAowFU2liU3CUSwKMBVBhcmNolEsCjARGYXJllEsCjAhFbWJhcmtlZJRLAXWMBW1ldGFzlH2U
+KIwETmFtZZRLA4wGVGlja2V0lEsDjAVDYWJpbpRLA3V1YmF1Lg==
+</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
